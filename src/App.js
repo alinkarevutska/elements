@@ -3,7 +3,7 @@ function App() {
   return (
   <div className="App">
     <div>
-    <Button primary secondary>Click here!</Button>
+    <Button primary>Click here!</Button>
     </div>
     <div>
     <Button secondary outline>Buy Now!</Button>
@@ -12,10 +12,10 @@ function App() {
     <Button success rounded>See Deal!</Button>
     </div>
     <div>
-    <Button>Hide Ads!</Button>
+    <Button danger>Hide Ads!</Button>
     </div>
     <div>
-    <Button>Subscribe!</Button>
+    <Button warning outline>Subscribe!</Button>
     </div>
   </div>
   );
