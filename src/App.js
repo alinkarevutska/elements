@@ -1,15 +1,32 @@
 import Button from "./Button";
+import { GoBell, GoPlus, GoChevronRight} from "react-icons/go";
+
 function App() {
+  const handleClick = () => {
+    console.log('click!')
+  }
+  const onMouseEnter = () => {
+    console.log('mouse enter!')
+  }
   return (
   <div className="App">
     <div>
-    <Button primary>Click here!</Button>
+    <Button primary onClick={handleClick} className="mb-5"> 
+      <GoBell/> 
+      Click here!
+    </Button>
     </div>
     <div>
-    <Button secondary outline>Buy Now!</Button>
+    <Button secondary outline onMouseEnter={onMouseEnter}>
+      <GoPlus/>
+      Buy Now!
+    </Button>
     </div>
     <div>
-    <Button success rounded>See Deal!</Button>
+    <Button success rounded onMouseLeave={handleClick}>
+      <GoChevronRight/>
+      See Deal!
+    </Button>
     </div>
     <div>
     <Button danger>Hide Ads!</Button>

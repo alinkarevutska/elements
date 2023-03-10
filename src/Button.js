@@ -9,19 +9,20 @@ const Button = ({
     danger,
     outline, 
     rounded,
+    ...rest
 }) => {
-    const classes = className('px-3 py-1.5 border m-1', {
-        'border-blue-500 bg-blue-500 text-white': primary,
+    const classes = className(rest.className, 'flex items-center px-3 py-1.5 border m-1', { //default classes
+        'border-blue-500 bg-blue-500 text-white': primary, //additional classes (truthy or falthy)
         'border-gray-900 bg-gray-900 text-white': secondary,
         'border-green-500 bg-green-500 text-white': success,
         'border-yellow-400 bg-yellow-400 text-white': warning,
         'border-red-500 bg-red-500 text-white': danger,
         'rounded-full': rounded,
-        'bg-white outline-inherit text-gray-900': outline,
+        'bg-zinc-50 outline-inherit text-gray-800': outline,
     });
 
     return (
-        <button className={classes}>{children}</button>
+        <button {...rest} className={classes}>{children}</button>
     );
 };
 
