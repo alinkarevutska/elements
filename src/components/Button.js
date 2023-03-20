@@ -18,7 +18,7 @@ const Button = ({
         'border-yellow-400 bg-yellow-400 text-white': warning,
         'border-red-500 bg-red-500 text-white': danger,
         'rounded-full': rounded,
-        'bg-zinc-50 outline-inherit text-gray-800': outline,
+        'bg-zinc-50 outline-inherit text-black': outline,
     });
 
     return (

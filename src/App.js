@@ -1,40 +1,28 @@
-import Button from "./Button";
-import { GoBell, GoPlus, GoChevronRight} from "react-icons/go";
+import Button from "./components/Button";
+import Accordion from "./components/Accordion";
 
 function App() {
-  const handleClick = () => {
-    console.log('click!')
-  }
-  const onMouseEnter = () => {
-    console.log('mouse enter!')
-  }
+
+  const items = [
+    {
+      id: 'yfrdkg',
+      label: 'Can I use React on a project?',
+      content: 'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.'
+    },
+    {
+      id: '0978tfhdr',
+      label: 'Can I use JavaScript on a project?',
+      content: 'You can use JavaScript on any project you want. You can use JavaScript on any project you want. You can use JavaScript on any project you want. You can use JavaScript on any project you want.'
+    },
+    {
+      id: '096fdfjyrdsr',
+      label: 'Can I use Tailwind on a project?',
+      content: 'You can use Tailwind on any project you want. You can use Tailwind on any project you want. You can use Tailwind on any project you want. You can use Tailwind on any project you want.'
+    },
+  ]
+  
   return (
-  <div className="App">
-    <div>
-    <Button primary onClick={handleClick} className="mb-5"> 
-      <GoBell/> 
-      Click here!
-    </Button>
-    </div>
-    <div>
-    <Button secondary outline onMouseEnter={onMouseEnter}>
-      <GoPlus/>
-      Buy Now!
-    </Button>
-    </div>
-    <div>
-    <Button success rounded onMouseLeave={handleClick}>
-      <GoChevronRight/>
-      See Deal!
-    </Button>
-    </div>
-    <div>
-    <Button danger>Hide Ads!</Button>
-    </div>
-    <div>
-    <Button warning outline>Subscribe!</Button>
-    </div>
-  </div>
+  <Accordion items={items}/>
   );
 }
 
